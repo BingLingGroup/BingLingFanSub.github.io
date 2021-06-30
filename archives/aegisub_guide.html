@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://https-binglinggroup-github-io.disqus.com">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            aegisub使用指南(210624) | 
+        
+        冰灵的博客 | BingLing&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/custom/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="冰灵制作组的日志集散地">
+    <meta name="keywords" content=",教程,字幕,时间轴,aegisub,x264,压制,Premiere,帧服务器">
+    <meta name="theme-color" content="#268bd2">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?AOttsn/BTbWJsOuxkt9DPA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #cb4b16;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #268bd2 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #268bd2 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #268bd2 !important;
+  }
+
+  .toTop {
+    background: #d33682 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #d33682;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #d33682;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #d33682;
+  }
+
+  .post-toc a:hover {
+    color: #cb4b16;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #FDF6E3;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://binglinggroup.github.io/archives/aegisub_guide.html">
+    <meta name="msapplication-navbutton-color" content="#268bd2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/custom/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://binglinggroup.github.io/archives/aegisub_guide.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="aegisub使用指南(210624) | 冰灵的博客 | BingLing&#39;s Blog">
+    <meta property="og:image" content="/img/custom/favicon.png">
+    <meta property="og:description" content="冰灵制作组的日志集散地">
+    <meta property="og:article:tag" content="教程"> <meta property="og:article:tag" content="字幕"> <meta property="og:article:tag" content="时间轴"> <meta property="og:article:tag" content="aegisub"> <meta property="og:article:tag" content="x264"> <meta property="og:article:tag" content="压制"> <meta property="og:article:tag" content="Premiere"> <meta property="og:article:tag" content="帧服务器"> 
+
+    
+        <meta property="article:published_time" content="Fri Aug 02 2019 18:00:00 GMT+0000">
+        <meta property="article:modified_time" content="Thu Jun 24 2021 16:01:18 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://binglinggroup.github.io/archives/aegisub_guide.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://binglinggroup.github.io/archives/aegisub_guide.html",
+    "headline": "aegisub使用指南(210624)",
+    "datePublished": "Fri Aug 02 2019 18:00:00 GMT+0000",
+    "dateModified": "Thu Jun 24 2021 16:01:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "冰灵",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/custom/avatar.png"
+        },
+        "description": "Return to the past now!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "冰灵的博客 | BingLing&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/custom/favicon.png"
+        }
+    },
+    "keywords": ",教程,字幕,时间轴,aegisub,x264,压制,Premiere,帧服务器",
+    "description": "冰灵制作组的日志集散地",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+                    
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载软件"><span class="post-toc-number">1.</span> <span class="post-toc-text">下载软件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件初始设置"><span class="post-toc-number">2.</span> <span class="post-toc-text">软件初始设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Win10系统DPI缩放"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Win10系统DPI缩放</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Aegisub默认选项调整"><span class="post-toc-number">3.</span> <span class="post-toc-text">Aegisub默认选项调整</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#颜色标准"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">颜色标准</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样式入门"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">样式入门</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特效入门"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">特效入门</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加载视频和音频"><span class="post-toc-number">4.</span> <span class="post-toc-text">加载视频和音频</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#打轴"><span class="post-toc-number">5.</span> <span class="post-toc-text">打轴</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#视频区打轴"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">视频区打轴</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#音频区打轴"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">音频区打轴</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#翻译"><span class="post-toc-number">6.</span> <span class="post-toc-text">翻译</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#压制"><span class="post-toc-number">7.</span> <span class="post-toc-text">压制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#作为mov导入非编"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">作为mov导入非编</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用帧服务器-avisynth压制"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">使用帧服务器-avisynth压制</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他"><span class="post-toc-number">8.</span> <span class="post-toc-text">其他</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注释"><span class="post-toc-number">9.</span> <span class="post-toc-text">注释</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://static.aegisub.org/img/logo-large-bcf2435c.png)">
+    
+            <p class="article-headline-p">
+                aegisub使用指南(210624)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/custom/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>冰灵</strong>
+        <span>8月 02, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACY0lEQVR42u3aQU7EMAwF0N7/0rBFQu18201a0OsKMWXq10USvn18/evrwMPDw8PDw8PDexnviK/f9//8zenDLv/27M5ebXh4eHg7eR+W2pMSr1/BWaHX90xqw8PDw9vPy8vNF+6koOt6qrXh4eHhvY2XLNY9UvJcPDw8vL/Iy5fy5Df5q8TDw8N7J6+6rOel5+FFdRPCw8PDe4p3byn3/vxAfw8PDw/vkjeJFfKmV7KFTMIOPDw8vJ28JBrolVgd3poc2fHw8PCe4vUa/NVy56NaN4yr4uHh4d3KyzeA/ECcby3VWAQPDw/vKV4eARQe0zqg914fHh4e3k5e3gy7Lrr3CuaBCB4eHt5+XjUgmEQVVUyvVYaHh4e3k1cdAsgHswojU/OXi4eHh7eYlzDuDRcmn0ZtNjw8PLzFvMmi3wt2q0+vRhJ4eHh4q3n59lAefioOHPTi4w+jA3h4eHgLeL1Fv7qpVLeEUTsNDw8PbyOvGp5Wt5DqJtGsEw8PD28xr1p6vj304obeqAEeHh7eTl7+RZP787ihukXh4eHh7eclbftCEDAYIKg20m5IqfHw8PAGvHsX6+sXl9w/iSTw8PDwVvOSR84bWgkmHyPAw8PDe5ZXvSaH6fx4Xf0UDw8PbyfviK/qY6qDAnlLrDA6gIeHh7eMVw0RmgHrOCCODvd4eHh4G3l5mJsv+smn925OeHh4eG/j9QCjI3L1e/Dw8PBeyZscjnuNt/zfADw8PLydvF7TKw9qk1ZZr22Gh4eHt59XDQLy4YC86Gp4sXB0AA8PD++S9/8uPDw8PDw8PDy8F1zfbOd8uL8HYJkAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Premiere/">Premiere</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/aegisub/">aegisub</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/x264/">x264</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/压制/">压制</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/字幕/">字幕</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/帧服务器/">帧服务器</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/教程/">教程</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/时间轴/">时间轴</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=aegisub使用指南(210624)&url=https://binglinggroup.github.io/archives/aegisub_guide.html&pic=https://binglinggroup.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=aegisub使用指南(210624)&url=https://binglinggroup.github.io/archives/aegisub_guide.html&via=冰灵" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://binglinggroup.github.io/archives/aegisub_guide.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=冰灵的博客 | BingLing&#39;s Blog&title=aegisub使用指南(210624)&summary=冰灵制作组的日志集散地&pics=https://binglinggroup.github.io/img/favicon.png&url=https://binglinggroup.github.io/archives/aegisub_guide.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://binglinggroup.github.io/archives/aegisub_guide.html&text=aegisub使用指南(210624)" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+                
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>题图来源<a name="ref_1_s"><a href="#ref_1_d"><sup>[1]</sup></a></a><br>
+PC版网页左上角从上到下第二个图标是目录，请多用目录。<br>
+网页右下角按钮为返回顶部，请多用返回顶部来查看顶部目录。<br>
+标题后面括号里的日期指的是最后更新日期，头像旁边的日期是最初发布日期。</p>
+</blockquote>
+<font size="4">目录</font>
+<ol>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6">下载软件</a></li>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE">软件初始设置</a>
+<ul>
+<li>2.1 <a href="#win10%E7%B3%BB%E7%BB%9Fdpi%E7%BC%A9%E6%94%BE">Win10系统DPI缩放</a></li>
+<li>2.2 <a href="#aegisub%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9%E8%B0%83%E6%95%B4">Aegisub默认选项调整</a>
+<ul>
+<li>2.2.1 <a href="#%E9%A2%9C%E8%89%B2%E6%A0%87%E5%87%86">颜色标准</a></li>
+<li>2.2.2 <a href="#%E6%A0%B7%E5%BC%8F%E5%85%A5%E9%97%A8">样式入门</a></li>
+<li>2.2.3 <a href="#%E7%89%B9%E6%95%88%E5%85%A5%E9%97%A8">特效入门</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E8%A7%86%E9%A2%91%E5%92%8C%E9%9F%B3%E9%A2%91">加载视频和音频</a></li>
+<li><a href="#%E6%89%93%E8%BD%B4">打轴</a>
+<ul>
+<li>4.1 <a href="#%E8%A7%86%E9%A2%91%E5%8C%BA%E6%89%93%E8%BD%B4">视频区打轴</a></li>
+<li>4.2 <a href="#%E9%9F%B3%E9%A2%91%E5%8C%BA%E6%89%93%E8%BD%B4">音频区打轴</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BF%BB%E8%AF%91">翻译</a></li>
+<li><a href="#%E5%8E%8B%E5%88%B6">压制</a>
+<ul>
+<li>6.1 <a href="#%E4%BD%9C%E4%B8%BAmov%E5%AF%BC%E5%85%A5%E9%9D%9E%E7%BC%96">作为mov导入非编</a></li>
+<li>6.2 <a href="#%E4%BD%BF%E7%94%A8%E5%B8%A7%E6%9C%8D%E5%8A%A1%E5%99%A8-avisynth%E5%8E%8B%E5%88%B6">使用帧服务器-avisynth压制</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
+<li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li>
+</ol>
+<h3 id="下载软件">下载软件</h3>
+<p><a href="https://aegi.vmoe.info/downloads/" target="_blank" rel="noopener">下载地址</a></p>
+<p>完整版为安装包版本，便携版为免安装的版本，如果是windows系统，下载32位版本，建议使用安装包版本。</p>
+<h3 id="软件初始设置">软件初始设置</h3>
+<h4 id="Win10系统DPI缩放">Win10系统DPI缩放</h4>
+<div title="属性-兼容性" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/properties-compatibility.png" height="60%" width="60%"></div><div align="middle">属性-兼容性</div><br><div title="更改高DPI设置" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/properties-compatibility-change-dpi.png" height="60%" width="60%"></div><div align="middle">更改高DPI设置</div>
+<p>属性-兼容性-更改高DPI设置-替代高DPI缩放行为-应用程序。<br>
+这样能让软件显示更加清楚。</p>
+<h3 id="Aegisub默认选项调整">Aegisub默认选项调整</h3>
+<h4 id="颜色标准">颜色标准</h4>
+<p>打开Aegisub，选择菜单栏查看-选项，选择左侧高级-视频一栏，取消选择<code>强制BT.601</code>，现在越来越多的视频都是原生720P以上的了，原生720P以上的视频建议用BT.709，否则会有色差。</p>
+<h4 id="样式入门">样式入门</h4>
+<p>参见<a href="https://aegi.vmoe.info/docs/3.2/Styles/" target="_blank" rel="noopener">官方教程</a>，个人建议为避免侵权，请使用这些<a href="https://zhuanlan.zhihu.com/p/27302723" target="_blank" rel="noopener">商用免费字体</a>，个人推荐思源宋体和思源黑体。</p>
+<p>好看的样式一般为，字体主要颜色为白色或亮色，边框颜色为黑色或暗色，无阴影，不会调色的推荐用android应用（酷安）MD配色参考，或者是<a href="https://material.io/resources/color" target="_blank" rel="noopener">网页版material design取色器</a>。</p>
+<p>至于以下两种搭配，一是较大的字重配合较细的边框，二是较小的字重配合较粗的边框，可根据自己的喜好自行选择。不过我个人是推荐使用部分透明的厚边框搭配较小字重使用，譬如厚度达到或超过4像素，透明度90，字重为medium甚至更小。</p>
+<p>如果喜欢模糊特效的，可以通过菜单栏-自动化-添加边角模糊，<code>Ctrl-A</code>全选，然后再<code>Ctrl-H</code>将<code>{\be1}</code>标签全部替换成<code>{\blur4}</code>以达到效果。<code>blur</code>的模糊感比<code>be</code>更好，这里只是借助脚本批量添加特效而已。如果对选择对象有疑虑的，可以考虑使用菜单栏-字幕-选择多行功能。</p>
+<h4 id="特效入门">特效入门</h4>
+<p>续上，如果喜欢有模糊阴影特效的，aegisub不能直接添加带模糊的阴影，但是可以曲线救国，复制相关字幕行，将边框调至0，主要颜色调为你需要的阴影颜色，然后加<code>{\blur}</code>标签，这样即可达到字体本身模糊而非边框模糊的效果。</p>
+<p>为了和普通字幕有一定位移差距，可以添加<code>{\pos}</code>标签来控制位置，同时<code>{\pos}</code>标签也可以通过视频区最左一列向下第二个拖放字幕按钮控制。注意位置的控制和行对齐方式<code>{\a}</code>有关。</p>
+<p>正常情况下渲染器是不允许字幕重叠的，除非添加了自定义<code>{\pos}</code>标签，或者添加了层次编号。在添加了<code>{\pos}</code>标签不加层次编号的情况下，其图层上下是以字幕在字幕行位置的先后顺序来控制的，换句话说字幕行位置越靠前，图层越靠下。</p>
+<div title="层次编号" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/layer-number.png" height="80%" width="80%"></div><div align="middle">层次编号</div>
+<p>层次编号也是类似的，层次编号在文本区最左边，0为最底层，数字越大层越靠上。相关的特效标签详细描述，包括一些匀速运动效果的制作，可以参考ass<a href="https://aegi.vmoe.info/docs/3.2/ASS_Tags/" target="_blank" rel="noopener">特效标签</a>。以及很重要的<a href="https://aegi.vmoe.info/docs/3.2/Karaoke_Timing_Tutorial/" target="_blank" rel="noopener">卡拉OK特效制作</a>。</p>
+<h3 id="加载视频和音频">加载视频和音频</h3>
+<p>选择菜单栏视频-打开视频，选择视频文件打开。</p>
+<div title="界面一览" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/overview.png" height="80%" width="80%"></div><div align="middle">界面一览</div>
+<p>打开之后的界面如图所示，左上为视频区，右上为音频区，音频区下方为文字编辑区，文字编辑区下方是字幕栏。这里我们需要知道一个概念叫做焦点，如果你之前动过音频编辑区中的按键，那你的焦点就停留在音频区，无法使用别的区的快捷键，其他的也是类似。</p>
+<div title="音频区" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/audio-view.png" height="80%" width="80%"></div><div align="middle">音频区</div>
+<p>音频区建议打开频谱分析模式，而不是波形图模式。频谱分析模式的按钮在右下角从右到左第三个，这样查看人声区域更为直观，而波形图可能会把人声和其他声音看混。</p>
+<p>注意保存！虽然该软件每隔60秒就会自动保存一次，但是不包含自动恢复功能（需要自己去<code>C:\Users\你的用户名\AppData\Roaming\Aegisub\autosave</code>下找，或者在菜单栏查看-选项-备份中自己选择自动保存目录），我建议定期使用<code>Ctrl-S</code>快捷键进行保存。</p>
+<p>所有快捷键都可以在选项-热键中修改，如果对以下介绍的快捷键不爽可以自己改。</p>
+<h3 id="打轴">打轴</h3>
+<p>打轴主要有两种方式。</p>
+<p>视频区打轴主要是面向视频画面的打轴，效率较低，建议只在特殊情况下使用。</p>
+<p>音频区打轴效率较高，建议作为主要的对话字幕的打轴方式。</p>
+<p>还有一种邪典打轴是先使用软件自动生成时间轴，再作调整，这方面比较便利的工具是subtitleedit，右键subtitleedit的音频区就可以找到一个猜测时间码，然后自动生成时间轴，如果不愿意在subtitleedit编辑字幕，也可以导出成srt或者ass再用aegisub来编辑。另外一个在自动探测时间轴上更准确的工具是autosub ，中文版的<a href="https://github.com/BingLingGroup/autosub/blob/dev/docs/README.zh-Hans.md" target="_blank" rel="noopener">使用说明</a>，只要输入-i xxx参数即可自动生成时间轴。（生成时间轴均是本地生成，不需要联网）</p>
+<p>subtitleedit真正强大的地方在于可以OCR各种硬字幕，大家如果有需求可以深入研究。</p>
+<p>对话字幕的打轴标准是，一行字幕不要过长，导致左边视频区的字幕发生折行现象。如果折行不是很明显，可以在字幕内容最前部分添加标签<code>{\fs}</code>。如果实在太长，请根据实际语意分句，后方音频区打轴会介绍分句的操作。</p>
+<h4 id="视频区打轴">视频区打轴</h4>
+<div title="视频区" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/video-view.png" height="80%" width="80%"></div><div align="middle">视频区</div>
+<p>视频区从左到右第9个按钮，是将当前视频区的时间，设置成当前字幕的起始时间<code>Ctrl-3</code>。</p>
+<p>第10个则是设置成结束时间<code>Ctrl-4</code>。有时候根据视频定位还是很有用的，譬如做那些字幕组常见的对场景的操作。在这种情况下，保持焦点在视频区这边，然后用鼠标滚轮可以按帧细调时间，非常方便对场景。</p>
+<p>左边两个按钮则刚好相反，是让视频界面的时间，设置成字幕的始/末时间，快捷键分别是<code>Ctrl-1</code>和<code>Ctrl-2</code>。</p>
+<p>当前字幕指的是当前字幕区选中的字幕，这里推荐将选项-视频里的<code>选择行改变后，视频位置变为所选行的开始时间</code>这一项取消了勾选，意味着原先单击就会改变视频位置，现在需要双击，这样可以方便我们在不需要改变当前活动行或者说当前视频位置的时候，单击别的行更改别的行的文字。</p>
+<div title="视频区下方" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/video-view-buttons.png" height="80%" width="80%"></div><div align="middle">视频区下方</div>
+<p>至于视频区下方的控件，第一个播放按钮就是播放视频<code>Ctrl-P</code>，第二个则是播放字幕行内视频<code>Home</code>，建议修改为自己习惯用的按键。</p>
+<h4 id="音频区打轴">音频区打轴</h4>
+<div title="音频区下方" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/aegisub_guide/audio-view-buttons.png" height="80%" width="80%"></div><div align="middle">音频区下方</div>
+<p>对音频区的编辑，需要用到的快捷键主要有这三个。</p>
+<ul>
+<li>R播放所选部分音频区间，对应上图左至右第二个按键。</li>
+<li>E播放所选部分头500毫秒，对应上图左至右第六个按键。</li>
+<li>D播放所选部分尾500毫秒，对应上图左至右第七个按键。</li>
+</ul>
+<p>如果焦点不在音频区，请用鼠标点击这一栏中的按键完成操作。<br>
+注意默认生成新行的计时长度，可以在选项-音频中进行调整。</p>
+<p>一种使用方法是左手食指D键，中指R键，无名指E键控制音频播放，右手鼠标控制始末时间。</p>
+<p>注意拖动时按左键和不拖动按左键的行为不一样，不拖动按左键是控制开始或者结束时间，但是拖动时按左键会让上一个结束时间成为开始时间，当前位置成为结束时间。右键没有这个逻辑，如果用不到这个逻辑，建议取消勾选选项-音频-左键点击拖动动作结束标记。</p>
+<p>注意编辑信息只有回车提交改动后才会保存，所以这段时间内不要切换到视频区。当一行时间轴制作完毕后，右手回车确认当前行，然后跳到下一行字幕。</p>
+<p>如果对时间轴的长句断句效果不满意，可以有两种方式重新分句，一种是将原本在剧本中的长句对应的多行字幕选中(多选请按住<code>Shift</code>键或者<code>Ctrl</code>键，效果不同)右键-合并(连接J)，然后根据自己的喜好将光标放在下半句的第一个词前面，右键-在光标处分割(概略计时)，如不满意再根据此结果微调。另一种则是直接拖动音频区开始结束时间进行调整，如果行数不够可以通过选中右键-插入(之后)来增加。</p>
+<p>如果要中途插入时间轴，那么选择最下方的字幕栏区域，根据你当前行的时间位置，右键选择插入(之前)或者插入(之后)，然后在新生成的字幕行中重复以上分句操作。</p>
+<h3 id="翻译">翻译</h3>
+<p>如果是制作双语字幕，翻译前首先确认是否复制了时间轴，如果没有，点中字幕栏中任意一行字幕，使用快捷键<code>Ctrl-A</code>全选所有行字幕，使用<code>Ctrl-C</code>复制，然后选择最下面的空行，使用<code>Ctrl-V</code>粘贴，这样就获得了中文字幕的时间轴。如果没有空行，请选择最后一行后右键插入之后来添加一行，或者回车也可以。</p>
+<p>翻译时，可以在文字编辑区删除原文这样来进行翻译，不过我不太推荐。更好的方式则是选择菜单栏字幕-翻译助手，进行翻译，借助翻译助手的快捷键，翻译效率会更高一些。</p>
+<h3 id="压制">压制</h3>
+<p>字幕做好以后就是压制。如果你是普通搬运工，已经有生肉的情况下，不需要加特效那些必须要非编实现的东西，那么直接使用小丸工具箱压制即可，相关教程参见<a href="https://www.bilibili.com/read/cv311967" target="_blank" rel="noopener">磁爆线圈X的文章</a>。</p>
+<p>以下主要讲解较为冷门的，两种配合非编使用，输出带字幕视频的方法，一般多用于原创类视频压制。</p>
+<ul>
+<li>因为制作ass字幕时必须要有视频，所以你在正式输出带字幕的视频之前，肯定已经输出了一版不带字幕的视频了。这里介绍的方法则是从非编中只经过一次压制出来的带字幕视频的压制方法（俗称直出），而非在用于aegisub读取的无字幕视频上再压制得到的带字幕视频的压制方法（俗称二压，画质损失会比前者大）。当然这也暗示了你可以在第一版不带字幕视频上面用较差参数获得较快输出的速度，<s>反正也不是用在最终视频上面画质差一点无所谓。另行参考：画质大敌<a href="https://github.com/zyzsdy/NegativeEncoder" target="_blank" rel="noopener">消极压制</a>。</s></li>
+</ul>
+<h4 id="作为mov导入非编">作为mov导入非编</h4>
+<p>如果是作为mov导入非编，想要在非编里面把字幕压制上的，而不是通过帧服务器的，推荐使用<a href="https://www.zhihu.com/question/42359025/answer/277296784" target="_blank" rel="noopener">ffmpeg的一条指令</a>来压制含透明通道的字幕视频。原理：通过lavfi生成mov封装的png视频流格式，参见<a href="https://stackoverflow.com/questions/46315483/ffmpeg-create-a-transparent-background-with-lavfi" target="_blank" rel="noopener">stackoverflow</a>以及ffmpeg官方的<a href="https://ffmpeg.org/ffmpeg-filters.html" target="_blank" rel="noopener">ffmpeg-filters文档</a>。</p>
+<pre class="line-numbers language-language-bash"><code class="language-language-bash">ffmpeg -y -f lavfi -i "color=color=背景色:rate=帧率:size=尺寸,format=rgba,subtitles=字幕文件名:alpha=1" -c:v png -t "hh:mm:ss.000" 目标文件名.mov -stats
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>背景色：空白视频的背景颜色，透明的背景可以使用<code>0xFFFFFF00</code>，颜色格式<a href="https://ffmpeg.org/ffmpeg-utils.html#color-syntax" target="_blank" rel="noopener">参考</a>。注意，虽然表面上看任何透明度设置为00的背景都为透明，但实际上在字体边缘会出现非透明色，而非透明色即为透明度值以外所设置的颜色，如0xFFFFFF为白色。所以正常情况下还是建议生成绿幕mp4视频，并用色键/超级键之类的功能进行抠图后使用，这样不会有色边问题困扰。如果字幕边缘色，如边框以及阴影，只有一种，那么可以考虑设置为字幕边缘颜色，如字幕边缘颜色为黑色的情况下，设置为0x000000000。</li>
+<li>帧率：整数或者整数相除形式如<code>24000/1001</code>（23.976fps即NTSC）。这会直接影响到字幕特效的流畅度，建议至少达到你要导入的项目的帧率。</li>
+<li>尺寸：类似<code>1920x1080</code>的形式。</li>
+<li>字幕文件名：如果有空格，请用单引号包围。
+<ul>
+<li>暂时没找到填写绝对路径的方法，建议填写当前路径的文件。</li>
+<li>或者说在文件浏览器下使用<code>Shift - 左键</code>从当前文件夹打开Powershell后使用。</li>
+</ul>
+</li>
+<li>hh:mm:ss.000：小时：分钟：秒.毫秒，这个需要自己根据最晚一行字幕的时间填写，是空白视频的持续时间，至少应该达到你的字幕的持续时间，ffmpeg不会帮你判断你的字幕有多长时间。</li>
+<li>目标文件名：如果有空格，请用引号包围。</li>
+</ul>
+<p>而ffmpeg的安装建议使用<a href="https://chocolatey.org/install" target="_blank" rel="noopener">chocolatey</a>，这样可以把ffmpeg加到环境变量里面，可以在任意目录使用。</p>
+<p>安装时的命令为：</p>
+<pre class="line-numbers language-language-bash"><code class="language-language-bash">choco install ffmpeg -y
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>请使用管理员权限打开cmd或者powershell后输入安装命令。</p>
+<p>Vegas导入mov后，记得在mov文件-属性-媒体-Alpha通道中，修改为<code>直接(非蒙版的)</code>即可。注意如果有色差，是vegas自己的问题，需要在项目属性中确保：</p>
+<ul>
+<li>像素格式 - <code>32-bit浮点（全范围）</code></li>
+<li>gamma合成量 - <code>2.222（视频）</code></li>
+<li>查看转变 - <code>关</code></li>
+</ul>
+<h4 id="使用帧服务器-avisynth压制">使用帧服务器-avisynth压制</h4>
+<p>推荐通过小丸工具箱配合使用，压制参数和相关教程参见<a href="https://www.bilibili.com/read/cv311975" target="_blank" rel="noopener">磁爆线圈X的文章</a>，搜索关键词<code>帧服务器</code>即可跳转到。注意vegas使用的帧服务器则是debug mode frameserver。</p>
+<p>主要是通过avs挂载字幕压制来做到的，在遵循前面的文章，打开小丸工具箱的avs界面准备填语句时，改成以下即可。</p>
+<pre class="line-numbers language-language-python"><code class="language-language-python">plugin_source_name = "小丸工具箱父目录\小丸工具箱236\tools\avs\plugins\VSFilter.DLL"
+video_source_name = "视频文件"
+ass_source_name = "字幕文件"
+
+LoadPlugin(plugin_source_name)
+AVISource(video_source_name)
+ConvertToYV12(matrix = "Rec709")
+textsub(ass_source_name)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意该教程还有<a href="https://www.bilibili.com/read/cv311967" target="_blank" rel="noopener">上篇</a>，上篇中的防二压参数对于大会员画质（分辨率不超过1080P，帧率30fps+或码率3000kbps-6000kbps）依然有效。</p>
+<p>虽然原作者只给出了在设置-自定义命令行来定义2pass参数的使用方法，但是我们也可以用在小丸工具箱前面的自定义模式下面自己创建CRF模式下的参数（当然CRF模式比较难控制码率，这个根据个人喜欢来使用），方法是将其参数复制下来之后，在视频-自定义模式下填入参数，然后按照个人喜好再加<code>--crf xx</code>即可，注意crf的值不要超过23，crf的值超过23画质损失就比较明显了，动态视力好的人可能就能发现了，传b站crf的值也不建议低于21，除非你的视频静态画面特别多，甚至是PPT的那种。</p>
+<p>注意不要轻信网上说的高压参数，这个世界上只有妥协压制没有真正的高压参数，即使是h265或者说HEVC也只能做到比h264高30%的效率而已（虽然现在b站还不支持）。或者换句话说磁爆线圈X的这套参数基本已经是对硬件要求比较高的情况下可以允许的最好的高压参数了，其他参数调了可能还会被b站二压，自己用倒无所谓，特别是他这套参数还是对b站进行优化的。</p>
+<p>以及，帧服务器的音轨要单独压制，可以用非编单独输出aac/flac音频，然后用小丸封装/压制后再封装。</p>
+<p>注意Vapoursynth不支持这种玩法。至少我没发现，有谁知道的可以分享出来。</p>
+<h3 id="其他">其他</h3>
+<p>由于b站对1080P30fps以下且3000kbps以下的视频采取无条件二压，如果有人想要通过强行提帧率的方式而非提码率的方式进入大会员领域从而变相防止二压，可以了解一下<a href="https://lolicon.link/2017/02/11/using-svp4-in-video-processing/" target="_blank" rel="noopener">SVP补帧技术</a>，注意如果使用帧服务器源的avs似乎不能再套avs版的SVP，好像会炸，当然机器好的也可以试试。</p>
+<p>这里推荐用Vapoursynth（二压就二压吧，补帧要紧.jpg）+SVP的方法，Vapoursynth套字幕建议使用Vapoursynth版vsfilter，<s>在nmm的一个角落里可以下载到</s><a href="https://github.com/sorayuki/VSFilterMod/releases" target="_blank" rel="noopener">github上有</a>。</p>
+<p>Vapoursynth的使用方法，建议参考<a href="https://vcb-s.nmm-hd.org/" target="_blank" rel="noopener">VCB-S教程专栏</a>，或者去官网查文档。</p>
+<p>当然实际上用非编的话，也可以假补帧，通过关闭帧数重采样，但是输出超过30帧视频的方式。虽然这样有点浪费码率，但是对于字幕效果还是有加成的，你的字幕会按照高帧率的画面进行渲染，一些特效动画会更加细腻。</p>
+<p>附：</p>
+<p>我的SVP Vapoursynth参数是（个人已调整至最优，不太建议改动，除非你知道自己在做什么）：</p>
+<pre class="line-numbers language-language-python"><code class="language-language-python">import vapoursynth as vs
+import mvsfunc as mvf
+
+core = vs.get_core()
+
+# 把这俩 DLL 拷贝到 VapourSynth\plugins64 先
+# core.std.LoadPlugin("libsvpflow1_vs64.so")
+# core.std.LoadPlugin("libsvpflow2_vs64.so")
+
+svp_frame_num = 50
+svp_frame_den = 1
+
+source_file = r"视频文件"
+sub_file = r"字幕文件"
+# 不要删掉r，r表示Python原始字符串，这样可以在r修饰的字符串里面填写反斜线
+
+# source_0 open
+clip = core.lsmas.LWLibavSource(source=source_file, format="yuv420p8")
+
+# 运动向量精度 0.5 像素
+# 使用 GPU 渲染
+# 放大使用 Wiener interpolation(类似 Lanczos 6tap)
+# 缩小使用类似 BicubicResize(b=1,c=0) 的 cubic filter
+super = core.svp1.Super(clip, "{scale:{up:2, down:4}, pel:2, gpu:1}")
+# 使用 GPU 渲染
+# 搜索的运动矢量的方向时包含前向后向
+# 搜索的块大小 = 32x32 每个方向重叠四分之一个块
+# 精细搜索使用彻底搜索
+# 粗略搜索使用六边形搜索
+vectors = core.svp1.Analyse(
+    super["clip"],
+    super["data"],
+    clip,
+    "{gpu:1, vectors:3, block:{w:32, overlap:3}, main:{type:4, search:{coarse:{type:2, distance:-6, bad:{sad:2000, range:24}}}}, refine:[{thsad:250}]}")
+# 渲染算法 =
+#    时间加权之下混合前向和后向部分运动向量补偿 +
+#    额外的遮罩减小光晕提升物体边缘线条质量 +
+#    额外的运动向量进一步减少光晕
+# 帧插补 = 自动判断
+smooth = core.svp2.SmoothFps(
+    clip, 
+    super["clip"], 
+    super["data"], 
+    vectors["clip"], 
+    vectors["data"],
+    "{{gpuid:0, rate:{{num:{sfn}, den:{sfd}, abs:true}}, algo:2, mask:{{area:200}}, scene:{{mode:3}}}}".format(sfn=svp_frame_num, sfd=svp_frame_den))
+
+smooth = core.std.AssumeFPS(
+    smooth,
+    fpsnum=smooth.fps_num,
+    fpsden=smooth.fps_den)
+
+smooth = mvf.Depth(smooth, depth=10)
+# 添加字幕时使用10bit色深，觉得没用可以改回8bit
+ass_out = core.vsfm.TextSubMod(clip=smooth, file=sub_file)
+# 注意这里字幕文件添加位置在补帧之后，补帧之前添加字幕会污染画面
+ass_out = mvf.Depth(ass_out, depth=8)
+ass_out.set_output()
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="注释">注释</h3>
+<p>点击上箭头字符可返回原位置，方括号中的数字表示引用的次序。</p>
+<a name="ref_1_d"><a href="#ref_1_d">[1]</a></a>&nbsp;<a href="#ref_1_s">&nbsp;↑&nbsp;</a>&nbsp;<a href="http://www.aegisub.org/" target="_blank" rel="noopener">aegisub官网</a>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://binglinggroup.github.io/archives/aegisub_guide.html">https://binglinggroup.github.io/archives/aegisub_guide.html</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+                
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #d33682;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://binglinggroup.github.io/archives/aegisub_guide.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://binglinggroup.github.io/archives/aegisub_guide.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/archives/CUfOnwSLWxY.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/archives/Netch_guide.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/custom/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/custom/avatar.png" alt="冰灵's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        冰灵
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: binglingfansub@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">二月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/关于/">关于<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动画杂谈/">动画杂谈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/工具/">工具<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏/">游戏<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/演示/">演示<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/科普/">科普<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/资源/">资源<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/转载/">转载<span class="sidebar_archives-count">28</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="回溯">
+                
+                    <i class="material-icons sidebar-material-icons">restore</i>
+                
+                回溯
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">50</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/BingLingGroup" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;冰灵的博客 | BingLing's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        </body>
+    
+</html>

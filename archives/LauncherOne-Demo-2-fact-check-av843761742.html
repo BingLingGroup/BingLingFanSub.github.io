@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://https-binglinggroup-github-io.disqus.com">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            维珍轨道发射器一号Demo 2任务的一些说明 | 
+        
+        冰灵的博客 | BingLing&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/custom/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="冰灵制作组的日志集散地">
+    <meta name="keywords" content=",NASA,维珍轨道,LauncherOne">
+    <meta name="theme-color" content="#268bd2">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?AOttsn/BTbWJsOuxkt9DPA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #cb4b16;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #268bd2 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #268bd2 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #268bd2 !important;
+  }
+
+  .toTop {
+    background: #d33682 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #d33682;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #d33682;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #d33682;
+  }
+
+  .post-toc a:hover {
+    color: #cb4b16;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #FDF6E3;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html">
+    <meta name="msapplication-navbutton-color" content="#268bd2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/custom/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="维珍轨道发射器一号Demo 2任务的一些说明 | 冰灵的博客 | BingLing&#39;s Blog">
+    <meta property="og:image" content="/img/custom/favicon.png">
+    <meta property="og:description" content="冰灵制作组的日志集散地">
+    <meta property="og:article:tag" content="NASA"> <meta property="og:article:tag" content="维珍轨道"> <meta property="og:article:tag" content="LauncherOne"> 
+
+    
+        <meta property="article:published_time" content="Fri Mar 19 2021 19:00:00 GMT+0000">
+        <meta property="article:modified_time" content="Thu Mar 25 2021 20:05:30 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html",
+    "headline": "维珍轨道发射器一号Demo 2任务的一些说明",
+    "datePublished": "Fri Mar 19 2021 19:00:00 GMT+0000",
+    "dateModified": "Thu Mar 25 2021 20:05:30 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "冰灵",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/custom/avatar.png"
+        },
+        "description": "Return to the past now!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "冰灵的博客 | BingLing&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/custom/favicon.png"
+        }
+    },
+    "keywords": ",NASA,维珍轨道,LauncherOne",
+    "description": "冰灵制作组的日志集散地",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+                    
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原文"><span class="post-toc-number">2.</span> <span class="post-toc-text">原文</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#是维珍轨道不是维珍航天"><span class="post-toc-number">3.</span> <span class="post-toc-text">是维珍轨道不是维珍航天</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#维珍轨道或许不是英国公司"><span class="post-toc-number">4.</span> <span class="post-toc-text">维珍轨道或许不是英国公司</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发射器一号不是美国第一个空射轨道级火箭"><span class="post-toc-number">5.</span> <span class="post-toc-text">发射器一号不是美国第一个空射轨道级火箭</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">6.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#素材出处"><span class="post-toc-number">7.</span> <span class="post-toc-text">素材出处</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                维珍轨道发射器一号Demo 2任务的一些说明
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/custom/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>冰灵</strong>
+        <span>3月 19, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADkUlEQVR42u3awY6cQAwE0Pn/n06ukVawVe1uBkWP02gyYeFxMGX788fxz/FBgAMHDhw4cODAgQPHizk+8XH1v66++fn7q89XZ7s/w/01FPeCAwcOHDgOcPxSim457iGSM1z9/v5h3H8urgQHDhw4cBzjSMpeXhTbEpifP7nVooTjwIEDB47XcMxvIy+iycsBDhw4cOD4XznyEjun3NB2xIEDBw4cxzjyaHTf4Euad3mDL6H8Wq8UBw4cOHCMFxre//nR/Q4cOHDgwPGDoz3yQpis2eWLC/kyRH1HOHDgwIFjK0fbyNsb3tbWHZJ2YbHGhwMHDhw4tnLkBayNc2tBa41s9DBw4MCBA8cBjklzsC26eTybnLn4izhw4MCB4xhHu9ZQh6WlEVe+fteWWBw4cODAcY6jHTXlQSsptPNYuBZKceDAgQPHkxztwCnHmhT4PEYW0Q4HDhw4cGzlyAc886HR2i1NBk7RGgQOHDhw4NjKsasQrpXVtdJ4H+rywIkDBw4cOE5w5AsECU1+Y48uw7XvHThw4MCBY1OES1YT9oa3YjgUlNU8fOLAgQMHjtMc81NHS2nl7/OHlCxALL534MCBAweOkmPXGkG7TjePgskjwYEDBw4cz3PsLbRJk/FbrUkcOHDgwPEMRxuWdq2ptWXys3REixc4cODAgWMrx9qgqL3VfJh0Yri1uNCAAwcOHDgGHPkKWrvQ1i4ltGRrDwAHDhw4cJzj2BXn1oJc3jRcK/mj5iAOHDhw4BiPnSYBrG3P5Yt38zHYhvcOHDhw4MAxyCz3sa1tvbWBqi23+YO8/B4HDhw4cGzlSKLarttbi2dJ6c0HTsV7Bw4cOHDgWOLIw1hbgJPoNWkOThYmcODAgQPHOY5JczAJVHkJbAvq5HHiwIEDB47THGuX0pbAXQsKOUcUDnHgwIEDxzGOSVNvvtaQEydhsoh5OHDgwIHjGMeuFmEernL09gqLYIkDBw4cOLZyrK0srJXD9gHsios4cODAgeNJjrWBza6hUVue23WHxQiHAwcOHDjGHO3Kwt5v8ptvoaOSjAMHDhw4jnG0zbV2pNRebr5IMWli4sCBAweO93BMWnX5IGrelPzlzDhw4MCB4wUc7b/mwWztSvKFBhw4cODA8SRH0hxcGym1Lb+1NYgv9Epx4MCBA8d4oWEy7Mnp18JkC4EDBw4cOE5wOHDgwIEDBw4cOHDgwPGy4y/oRzTN4dnEIgAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/LauncherOne/">LauncherOne</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/NASA/">NASA</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/维珍轨道/">维珍轨道</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=维珍轨道发射器一号Demo 2任务的一些说明&url=https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html&pic=https://binglinggroup.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=维珍轨道发射器一号Demo 2任务的一些说明&url=https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html&via=冰灵" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=冰灵的博客 | BingLing&#39;s Blog&title=维珍轨道发射器一号Demo 2任务的一些说明&summary=冰灵制作组的日志集散地&pics=https://binglinggroup.github.io/img/favicon.png&url=https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html&text=维珍轨道发射器一号Demo 2任务的一些说明" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+                
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>这篇文章来自旋火的投稿，是同名视频内容的文字版。<br>
+PC版网页左上角从上到下第二个图标是目录，请多用目录。<br>
+网页右下角按钮为返回顶部，请多用返回顶部来查看顶部目录。</p>
+</blockquote>
+<font size="4">目录</font>
+<ol>
+<li><a href="#%E5%BA%8F">序</a></li>
+<li><a href="#%E5%8E%9F%E6%96%87">原文</a></li>
+<li><a href="#%E6%98%AF%E7%BB%B4%E7%8F%8D%E8%BD%A8%E9%81%93%E4%B8%8D%E6%98%AF%E7%BB%B4%E7%8F%8D%E8%88%AA%E5%A4%A9">是维珍轨道不是维珍航天</a></li>
+<li><a href="#%E7%BB%B4%E7%8F%8D%E8%BD%A8%E9%81%93%E6%88%96%E8%AE%B8%E4%B8%8D%E6%98%AF%E8%8B%B1%E5%9B%BD%E5%85%AC%E5%8F%B8">维珍轨道或许不是英国公司</a></li>
+<li><a href="#%E5%8F%91%E5%B0%84%E5%99%A8%E4%B8%80%E5%8F%B7%E4%B8%8D%E6%98%AF%E7%BE%8E%E5%9B%BD%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A9%BA%E5%B0%84%E8%BD%A8%E9%81%93%E7%BA%A7%E7%81%AB%E7%AE%AD">发射器一号不是美国第一个空射轨道级火箭</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#%E7%B4%A0%E6%9D%90%E5%87%BA%E5%A4%84">素材出处</a></li>
+</ol>
+<h3 id="序">序</h3>
+<p>大家好，我是旋火，这一期来简单聊聊我几个月前做梦梦见的一些文案错误，对维珍轨道发射器一号(LauncherOne)Demo 2任务的一些信息进行说明。注意，这是我用混元功法做梦梦见的，和现实没有任何联系。</p>
+<h3 id="原文">原文</h3>
+<p>另外，之前的1月17日，英国的维珍航天公司发射了9颗卫星，并没有使用航天发射架，而是从一架波音747飞机上把火箭扔出去，空中发射。之前美国虽然也试验过空射火箭，但这次维珍公司第一次实现了从飞机上发射卫星，中国航天工业还得加油。</p>
+<h3 id="是维珍轨道不是维珍航天">是维珍轨道不是维珍航天</h3>
+<p>维珍轨道的英文名是Virgin Orbit<a name="ref_1_s"><a href="#ref_1_d"><sup>[1]</sup></a><a name="ref_2_s"><a href="#ref_2_d"><sup>[2]</sup></a>，一般航天对应的英文是aerospace，所以这里是个翻译错误。如果你去中文互联网搜索维珍航天，也是搜不到太多东西的，或者说搜到的都是与维珍轨道无关的东西。而维珍轨道这个翻译，至少也是新华社使用的，可以说是相对正式的翻译<a name="ref_3_s"><a href="#ref_3_d"><sup>[3]</sup></a>。</a></a></a></p>
+<h3 id="维珍轨道或许不是英国公司">维珍轨道或许不是英国公司</h3>
+<p>一个公司的国家归属，根据知乎的说法，法人国籍(nationality of legal entity)相关的领域应该是与国际法有关，首要的判定条件是公司注册地(where a corporation is incorporated)<a name="ref_4_s"><a href="#ref_4_d"><sup>[4]</sup></a>，而根据“印度知乎”的说法<a name="ref_5_s"><a href="#ref_5_d"><sup>[5]</sup></a>，如果公司是上市公司，是可以从公司年报中获得其相关信息的，但是维珍轨道不是上市公司，其官网上<a name="ref_6_s"><a href="#ref_6_d"><sup>[6]</sup></a>也没有标明公司注册地，也不像火箭实验室那样，有爆出过公司注册地从新西兰迁移到美国的情况<a name="ref_7_s"><a href="#ref_7_d"><sup>[7]</sup></a>。那么在这种情况下也可以考虑主要营业地规则(principal place of business)，显然，维珍轨道目前的主要营业地是在美国，客户主要是美国客户，制造工厂也在美国，官网给出的总部地址也在美国<a name="ref_8_s"><a href="#ref_8_d"><sup>[8]</sup></a>，按这种规则判定，就应该是美国公司。尽管有一种常识是这个公司的股东是谁，就是“谁”的公司，往往也错误地推导成股东的国籍决定公司的国籍，但实际上这是不准确的。</a></a></a></a></a></p>
+<h3 id="发射器一号不是美国第一个空射轨道级火箭">发射器一号不是美国第一个空射轨道级火箭</h3>
+<p>这个错误就很致命了，飞马座(Pegasus)有话要说<a name="ref_9_s"><a href="#ref_9_d"><sup>[9]</sup></a><a name="ref_10_s"><a href="#ref_10_d"><sup>[10]</sup></a>。当然，这个讨论有个前提，那就是空射航天火箭。如果不把范围这样缩小的话，或者说空射轨道级运载火箭，那么单纯的空射火箭可就多了去了，空空导弹实际上也是空射火箭。</a></a></p>
+<p>飞马座运载火箭由轨道科学公司研制，于1990年4月5日首飞，到目前为止已经发射44次，成功39次，可不是什么试验性质。火箭前三级为固体火箭，可选单组元推进剂液体火箭作为四级，近地轨道运力为0.443吨，最初的载机为NASA运营的B-52，后改为轨道科学运营的洛克希德三星客机观星者(Stargazer)。在发射器一号之前，飞马座运载火箭是世界上唯一一个成功运营的空射轨道级运载火箭，也是世界上第一个私人公司研制的轨道级运载火箭。</p>
+<p>所以如果要给发射器一号定一个第一，那应该是第一个低温液体空射轨道级运载火箭。</p>
+<h3 id="总结">总结</h3>
+<p>以上就是一小段文案错误说明，当然，错误难免，但我想表达的是，一些低级错误如果不能及时说明，可能会造成不好的影响。作为观众的我们，对于一些视频中出现的，可能会有争议性的陈述，应该自己去网上进行搜索，查看那些相对可信来源透露出的信息，从而避免被错误影响。</p>
+<p>感谢大家的观看，我们下期再见吧。</p>
+<h3 id="素材出处">素材出处</h3>
+<p>点击上箭头字符可返回原位置，方括号中的数字表示引用的次序。</p>
+<a name="ref_1_d"><a href="#ref_1_d">[1]</a></a>&nbsp;<a href="#ref_1_s">&nbsp;↑&nbsp;</a> Virgin Orbit. Launch Demo 2 Recap
+<p><a href="https://youtu.be/yrx2PBzeRdU" target="_blank" rel="noopener">https://youtu.be/yrx2PBzeRdU</a></p>
+<a name="ref_2_d"><a href="#ref_2_d">[2]</a></a>&nbsp;<a href="#ref_2_s">&nbsp;↑&nbsp;</a> Virgin Orbit. Launcher 1 demo-2
+<p><a href="https://streamable.com/9htk9b" target="_blank" rel="noopener">https://streamable.com/9htk9b</a></p>
+<a name="ref_3_d"><a href="#ref_3_d">[3]</a></a>&nbsp;<a href="#ref_3_s">&nbsp;↑&nbsp;</a> 新华网. 维珍轨道公司空基运载火箭首次试射失败
+<p><a href="http://www.xinhuanet.com/2020-05/26/c_1126035271.htm" target="_blank" rel="noopener">http://www.xinhuanet.com/2020-05/26/c_1126035271.htm</a></p>
+<a name="ref_4_d"><a href="#ref_4_d">[4]</a></a>&nbsp;<a href="#ref_4_s">&nbsp;↑&nbsp;</a> Hoven Vilion. 一个公司属于哪个国家通过什么来判定？
+<p><a href="https://www.zhihu.com/question/30897334/answer/49970244" target="_blank" rel="noopener">https://www.zhihu.com/question/30897334/answer/49970244</a></p>
+<a name="ref_5_d"><a href="#ref_5_d">[5]</a></a>&nbsp;<a href="#ref_5_s">&nbsp;↑&nbsp;</a> Sharad Kumar Churiwala. How can you legally find out in what country a company is incorporated?
+<p><a href="https://www.quora.com/How-can-you-legally-find-out-in-what-country-a-company-is-incorporated" target="_blank" rel="noopener">https://www.quora.com/How-can-you-legally-find-out-in-what-country-a-company-is-incorporated</a></p>
+<a name="ref_6_d"><a href="#ref_6_d">[6]</a></a>&nbsp;<a href="#ref_6_s">&nbsp;↑&nbsp;</a> Virgin Orbit. Meet The Virgin Orbit Team
+<p><a href="https://virginorbit.com/team/" target="_blank" rel="noopener">https://virginorbit.com/team/</a></p>
+<a name="ref_7_d"><a href="#ref_7_d">[7]</a></a>&nbsp;<a href="#ref_7_s">&nbsp;↑&nbsp;</a> Wikipedia. Rocket Lab
+<p><a href="https://en.wikipedia.org/wiki/Rocket_Lab" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Rocket_Lab</a></p>
+<a name="ref_8_d"><a href="#ref_8_d">[8]</a></a>&nbsp;<a href="#ref_8_s">&nbsp;↑&nbsp;</a> Virgin Orbit. Contact us
+<p><a href="https://virginorbit.com/contact-us/" target="_blank" rel="noopener">https://virginorbit.com/contact-us/</a></p>
+<a name="ref_9_d"><a href="#ref_9_d">[9]</a></a>&nbsp;<a href="#ref_9_s">&nbsp;↑&nbsp;</a> Wikipedia. Northrop Grumman Pegasus
+<p><a href="https://en.wikipedia.org/wiki/Northrop_Grumman_Pegasus" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Northrop_Grumman_Pegasus</a></p>
+<a name="ref_10_d"><a href="#ref_10_d">[10]</a></a>&nbsp;<a href="#ref_10_s">&nbsp;↑&nbsp;</a> SciNews. Pegasus XL launches CYGNSS
+<p><a href="https://youtu.be/c4EQyLv3pIo" target="_blank" rel="noopener">https://youtu.be/c4EQyLv3pIo</a></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html">https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+                
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #d33682;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://binglinggroup.github.io/archives/LauncherOne-Demo-2-fact-check-av843761742.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/archives/SwingFire-SpaceLaunchInfo-2103.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/archives/SwingFire-SpaceLaunchForecast-2103.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/custom/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/custom/avatar.png" alt="冰灵's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        冰灵
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: binglingfansub@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">二月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/关于/">关于<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动画杂谈/">动画杂谈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/工具/">工具<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏/">游戏<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/演示/">演示<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/科普/">科普<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/资源/">资源<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/转载/">转载<span class="sidebar_archives-count">28</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="回溯">
+                
+                    <i class="material-icons sidebar-material-icons">restore</i>
+                
+                回溯
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">50</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/BingLingGroup" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;冰灵的博客 | BingLing's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        </body>
+    
+</html>

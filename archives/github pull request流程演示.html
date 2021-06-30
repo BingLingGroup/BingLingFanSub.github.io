@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://https-binglinggroup-github-io.disqus.com">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            github pull request流程演示 | 
+        
+        冰灵的博客 | BingLing&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/custom/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="冰灵制作组的日志集散地">
+    <meta name="keywords" content=",教程,windows,sourcetree,git,github,pull request">
+    <meta name="theme-color" content="#268bd2">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?AOttsn/BTbWJsOuxkt9DPA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #cb4b16;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #268bd2 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #268bd2 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #268bd2 !important;
+  }
+
+  .toTop {
+    background: #d33682 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #d33682;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #d33682;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #d33682;
+  }
+
+  .post-toc a:hover {
+    color: #cb4b16;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #FDF6E3;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://binglinggroup.github.io/archives/github pull request流程演示.html">
+    <meta name="msapplication-navbutton-color" content="#268bd2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/custom/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://binglinggroup.github.io/archives/github pull request流程演示.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="github pull request流程演示 | 冰灵的博客 | BingLing&#39;s Blog">
+    <meta property="og:image" content="/img/custom/favicon.png">
+    <meta property="og:description" content="冰灵制作组的日志集散地">
+    <meta property="og:article:tag" content="教程"> <meta property="og:article:tag" content="windows"> <meta property="og:article:tag" content="sourcetree"> <meta property="og:article:tag" content="git"> <meta property="og:article:tag" content="github"> <meta property="og:article:tag" content="pull request"> 
+
+    
+        <meta property="article:published_time" content="Fri Feb 01 2019 09:00:00 GMT+0000">
+        <meta property="article:modified_time" content="Mon Jul 08 2019 08:19:52 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://binglinggroup.github.io/archives/github pull request流程演示.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://binglinggroup.github.io/archives/github pull request流程演示.html",
+    "headline": "github pull request流程演示",
+    "datePublished": "Fri Feb 01 2019 09:00:00 GMT+0000",
+    "dateModified": "Mon Jul 08 2019 08:19:52 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "冰灵",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/custom/avatar.png"
+        },
+        "description": "Return to the past now!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "冰灵的博客 | BingLing&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/custom/favicon.png"
+        }
+    },
+    "keywords": ",教程,windows,sourcetree,git,github,pull request",
+    "description": "冰灵制作组的日志集散地",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+                    
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#程序准备"><span class="post-toc-number">2.</span> <span class="post-toc-text">程序准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装sourcetree"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">安装sourcetree</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装git</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pull-request流程"><span class="post-toc-number">3.</span> <span class="post-toc-text">pull request流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#远程克隆-fork-他人仓库"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">远程克隆(fork)他人仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#克隆-clone-你刚创建的副本并修改本地文件"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">克隆(clone)你刚创建的副本并修改本地文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提交-commit-你刚才进行的改动"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">提交(commit)你刚才进行的改动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#推送-push-你刚才的提交-commit"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">推送(push)你刚才的提交(commit)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#我想反悔推送-push-怎么办"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">我想反悔推送(push)怎么办</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/[Crappy%201080P]%20Code%20Lyoko%20S4E72_20180219_191113.614.png)">
+    
+            <p class="article-headline-p">
+                github pull request流程演示
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/custom/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>冰灵</strong>
+        <span>2月 01, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3UlEQVR42u3aQY7iQAwFUO5/6Z5tS60033aYybheVggCqVcLLPvX6+vI64WNjY2NjY2NjY39SPYrvr7ff/X6+ztXv//z06v7LwHFNWNjY2OfwH7z139Bze9M8L+D8zVcbig2Njb2Aexq0UpKUbXwVMtesmZsbGxs7JzUK2zVTcTGxsbGnhew5J3fh0HRQL84zMLGxsbGzgc01aigWgKrn358loaNjY39ePZdQe/ffP2gfBsbGxv7n7J716RE5aFvr4G5XDM2Njb2UvYkju21K0kpSr6bD5iwsbGxd7Mng/vJtyahb74R2NjY2Cewq+3BfKHJRleLXNQIYWNjYy9l3zUkqm5QNRLohQTY2NjYJ7OTgpQcl0k2a7K5yRqwsbGxd7M/PaDPo4Xqc6vjMGxsbOyt7KSFqDKSBiPH5OVw1IpgY2Nj/7fsPHytxgP5sClpNvKjP+VWBBsbG3sROykGSdEqL2gQNheGWdjY2Nir2dUSNR9L5c1Jr7hGszRsbGzsdex8TDNpFarI+dEfbGxs7N3sXlSQDJV6Q/+8IcnjZ2xsbOwT2JOBTq/B6IUKvcgZGxsb+wR2bzw0ZyRFqHow6LJ8YmNjYy9lz4/gTOLbewOGQiuCjY2NvYg9X2iPkR++qR4wwsbGxj6TXf2JyUioehAn35Q338LGxsZeyp6MeO4aDOW/kLQcUTyAjY2NvZQ9GdlMxveTjS48BRsbG3s1Ox8q5S1K3kjkRS7fVmxsbOwz2b1RUS+CnRzi7B3BxMbGxt7KnhSMvG24q8HotTrY2NjYu9nVwlAtM8lCqzFALwzGxsbG3s2ejPjzALg6tIrKUhxdYGNjY5/Arh6U7JWWybbmGzdKRbCxsbGPYfeC4UmQ0GtysLGxsbHzULbXQvRKXRIbY2NjY5/Grj4sX2jePExK2punYGNjY69mV4PenDcf61ePBH0w38bGxsZ+JPucCxsbGxsbGxsbG/sx1x8pHVMlcVuEAgAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/github/">github</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/pull-request/">pull request</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/sourcetree/">sourcetree</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/windows/">windows</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/教程/">教程</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=github pull request流程演示&url=https://binglinggroup.github.io/archives/github pull request流程演示.html&pic=https://binglinggroup.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=github pull request流程演示&url=https://binglinggroup.github.io/archives/github pull request流程演示.html&via=冰灵" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://binglinggroup.github.io/archives/github pull request流程演示.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=冰灵的博客 | BingLing&#39;s Blog&title=github pull request流程演示&summary=冰灵制作组的日志集散地&pics=https://binglinggroup.github.io/img/favicon.png&url=https://binglinggroup.github.io/archives/github pull request流程演示.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://binglinggroup.github.io/archives/github pull request流程演示.html&text=github pull request流程演示" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+                
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p><a href="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/b07fd0f8ly1fyvvhry8scj21hc0u0hcw.jpg" target="_blank" rel="noopener">题图来源(Code Lyoko E72的07分17秒位置)</a>将浏览器拉窄即可看到全图。<br>
+PC版网页左上角从上到下第二个图标是目录，请多用目录。<br>
+网页右下角按钮为返回顶部，请多用返回顶部来查看顶部目录。</p>
+</blockquote>
+<font size="4">目录</font>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E7%A8%8B%E5%BA%8F%E5%87%86%E5%A4%87">程序准备</a>
+<ul>
+<li>2.1 <a href="#%E5%AE%89%E8%A3%85sourcetree">安装sourcetree</a></li>
+<li>2.2 <a href="#%E5%AE%89%E8%A3%85git">安装git</a></li>
+</ul>
+</li>
+<li><a href="#pull-request%E6%B5%81%E7%A8%8B">pull request流程</a>
+<ul>
+<li>3.1 <a href="#%E8%BF%9C%E7%A8%8B%E5%85%8B%E9%9A%86-fork-%E4%BB%96%E4%BA%BA%E4%BB%93%E5%BA%93">远程克隆(fork)他人仓库</a></li>
+<li>3.2 <a href="#%E5%85%8B%E9%9A%86-clone-%E4%BD%A0%E5%88%9A%E5%88%9B%E5%BB%BA%E7%9A%84%E5%89%AF%E6%9C%AC%E5%B9%B6%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6">克隆(clone)你刚创建的副本并修改本地文件</a></li>
+<li>3.3 <a href="#%E6%8F%90%E4%BA%A4-commit-%E4%BD%A0%E5%88%9A%E6%89%8D%E8%BF%9B%E8%A1%8C%E7%9A%84%E6%94%B9%E5%8A%A8">提交(commit)你刚才进行的改动</a></li>
+<li>3.4 <a href="#%E6%8E%A8%E9%80%81-push-%E4%BD%A0%E5%88%9A%E6%89%8D%E7%9A%84%E6%8F%90%E4%BA%A4-commit">推送(push)你刚才的提交(commit)</a></li>
+<li>3.5 <a href="#%E6%88%91%E6%83%B3%E5%8F%8D%E6%82%94%E6%8E%A8%E9%80%81-push-%E6%80%8E%E4%B9%88%E5%8A%9E">我想反悔推送(push)怎么办</a></li>
+</ul>
+</li>
+</ol>
+<p>本教程面向会使用谷歌的github零基础使用者，同时也作为刚入门github pull request的笔者的简单记录。</p>
+<div title="就是搜不到这种操作.jpg" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/你不会搜索吗.jpg" height="60%" width="60%"></div>
+<div align="middle">就是搜不到这种操作.jpg</div>
+<h3 id="简介">简介</h3>
+<p>pull request是什么？<a href="http://www.ruanyifeng.com/blog/2017/07/pull_request.html" target="_blank" rel="noopener">Pull Request 的命令行管理 - 阮一峰的网络日志</a></p>
+<blockquote>
+<p>“Pull Request 是一种通知机制。你修改了他人的代码，将你的修改通知原来的作者，希望他合并你的修改，这就是 Pull Request。”</p>
+</blockquote>
+<p>直接翻译过来可以理解为拉取(pull)请求(request)。推送(push)和拉取(pull)是github多种基本操作之一，推送一般指将本地git仓库的特定分支(branch)推送到远程仓库(譬如github的某个repository)的特定分支(也称remote branch)，pull则是相反的操作。之所以称作是拉取请求，我个人的理解是你对别人的仓库里一个分支的文件进行了改动，向别人发起请求来拉取你一个分支里的改动，只不过这里的拉取是远程到远程的操作，都是github上的仓库而和本地没有关系。</p>
+<h3 id="程序准备">程序准备</h3>
+<p>以下安装准备针对的操作系统环境是windows 10，git图形界面则是sourcetree，部分sourcetree不能解决的问题会涉及到git Bash操作。</p>
+<p><a href="#pull-request%E6%B5%81%E7%A8%8B">返回pull request流程</a></p>
+<h4 id="安装sourcetree">安装sourcetree</h4>
+<p><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">sourcetree</a>是一个并不那么省心的git图形界面软件，但是git图形界面软件就那么几个，只能将就着用了，不然就命令行吧。</p>
+<p>安装时建议使用内嵌(Embedded)版git，内嵌版git在添加多个github账号时使用起来较为繁琐，但是sourcetree使用外部git时<em>好像</em>(此处存疑)无法使用oauth一键绑定github账号，也要注意全局git config(位置一般在/Users/你的用户名/.gitconfig)中的用户设置，总之我印象里面是有bug。相比之下单独使用git配置多账户的教程可以参考<a href="https://www.jianshu.com/p/89cb26e5c3e8" target="_blank" rel="noopener">同一客户端下使用多个git账号 - 简书</a>。如果要使用系统自带的git，请自行安装git。<s>其他问题包括如何使用sourcetree，如何在sourcetree中登录github账号等，就自己谷歌吧，这里略去</s></p>
+<h4 id="安装git">安装git</h4>
+<p>安装git之前我建议先安装一个windows的第三方包管理器<a href="https://chocolatey.org/docs/installation" target="_blank" rel="noopener">chocolatey</a>，因为chocolatey可以自动帮你维护环境变量-系统变量，同时还能帮你更新软件，使用起来更加安心。chocolatey的使用范例可以参考<a href="https://blessing.studio/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/" target="_blank" rel="noopener">使用 ffmpeg 拼接 bilibili 客户端所下载的分段 flv 视频</a>。</p>
+<p>安装好chocolatey之后，用管理员权限运行命令行或者Powershell(譬如Win+X调出快捷键菜单运行)，输入以下指令来安装git。</p>
+<pre class="line-numbers language-language-bash"><code class="language-language-bash">choco install git -y
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="pull-request流程">pull request流程</h3>
+<p>pull request需要的流程主要是先远程克隆(<a href="https://www.zhihu.com/question/20431718" target="_blank" rel="noopener">fork</a>)他人的仓库，然后克隆(clone)到本地，接着在本地，对文件进行修改(modify)，修改之后，提交(commit)并推送(push)到你远程的分支(branch)上。再打开别人的项目主页，点击中间的New pull request建立新的拉取请求，可以看到一个对比页面，选择好了之后填写说明创建(Create pull request)即可。具体参考<a href="http://www.ruanyifeng.com/blog/2017/07/pull_request.html" target="_blank" rel="noopener">Pull Request 的命令行管理 - 阮一峰的网络日志</a>，这里不再赘述。</p>
+<p>以下是遵循<a href="#%E7%A8%8B%E5%BA%8F%E5%87%86%E5%A4%87">上述环境</a>下进行操作的一部分提示。</p>
+<h4 id="远程克隆-fork-他人仓库">远程克隆(fork)他人仓库</h4>
+<p>打开他人的仓库(repository)主页，你会看到右上角有一个Fork按钮，点击Fork，创建他人仓库在你github账号下的副本。</p>
+<h4 id="克隆-clone-你刚创建的副本并修改本地文件">克隆(clone)你刚创建的副本并修改本地文件</h4>
+<p>打开sourcetree，点击Clone，克隆你刚才创建的远端仓库副本，然后在本地修改文件。</p>
+<h4 id="提交-commit-你刚才进行的改动">提交(commit)你刚才进行的改动</h4>
+<p>这里面有两个坑，我先说明一下。</p>
+<p>首先，注意<a href="https://github.com/cssmagic/blog/issues/22" target="_blank" rel="noopener">关闭换行符自动转换</a>，如果你使用那种一旦将CRLF转换成LF就会影响代码运行或者其他严重后果的编程语言或者集成开发环境(如Batch，Vivado verilog等)，请务必关闭这一选项。其他情况也请酌情关闭。<s>LF虽好，可我大窗国自有国情在此，原不藉外夷货物以通有无</s></p>
+<p>其次，注意你要pull request的仓库是否开启了提交验证(commit verified)。</p>
+<div title="提交验证的后台设置位置，当然只有权限狗才能看得到_1.jpg" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/%E6%8F%90%E4%BA%A4%E9%AA%8C%E8%AF%81-1.png" height="70%" width="70%"></div>
+<div title="提交验证的后台设置位置，当然只有权限狗才能看得到_2.jpg" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/%E6%8F%90%E4%BA%A4%E9%AA%8C%E8%AF%81-2.png" height="50%" width="50%"></div>
+<p><s>不是这两张</s>，应该是下面这些。</p>
+<p>譬如仓库的readme里面或者contribute文档里面明确说明pull request需要签名验证<s>此处懒得找图了</s>。</p>
+<p>打开某个pull request后看到有人因为没有提交验证<s>而格格不入</s>。</p>
+<div title="没有提交验证而格格不入.jpg" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/%E6%8F%90%E4%BA%A4%E9%AA%8C%E8%AF%81-3.png" height="80%" width="80%"></div>
+<p>或者打开提交历史(在仓库主页点击commits即可看到)，最近的提交都有签名。</p>
+<div title="一列漂亮的小绿标.jpg" align="middle"><img src="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/github%20pull%20request%E6%B5%81%E7%A8%8B%E6%BC%94%E7%A4%BA/%E6%8F%90%E4%BA%A4%E9%AA%8C%E8%AF%81-4.png" height="80%" width="80%"></div>
+<p>关于<a name="签名验证"><a href="#签名验证">签名验证</a></a>的具体操作方法，可以参考我写的另一篇文章<a href="%E5%9C%A8windows%E7%89%88%E7%9A%84sourcetree%E4%B8%8A%E8%AE%BE%E7%BD%AEgpg%E7%AD%BE%E5%90%8D.html">在windows版的sourcetree上设置gpg签名</a>。</p>
+<p>如果你已经创建了pull request，忘记或者不清楚对提交进行签名，却被要求要进行签名<s>被格格不入</s>的时候，这时可以通过现在本地软重置提交再强制推送的方式更改掉你之前没有签名的分支，详见<a href="#%E6%88%91%E6%83%B3%E5%8F%8D%E6%82%94%E6%8E%A8%E9%80%81-push-%E6%80%8E%E4%B9%88%E5%8A%9E">反悔推送</a>的方法。注意你在强制推送之前，请务必先在本地做好带gpg签名的提交。</p>
+<h4 id="推送-push-你刚才的提交-commit">推送(push)你刚才的提交(commit)</h4>
+<p>这里也有两个坑。</p>
+<p>首先是sourcetree的问题。如果你在sourcetree里面绑定了多个github账号，提交能成功，却发现推送总是失败的时候，注意在工具-选项-验证-账户里，把当前仓库的账号设置成默认账号即可解决问题，原因是sourcetree对多个github账号的oauth验证管理有缺陷，似乎不能针对单个仓库进行账户密码管理。或者你也可以请<a href="https://blog.csdn.net/tengdazhang770960436/article/details/54171911" target="_blank" rel="noopener">自行配置</a>ssh而不使用sourcetree的oauth验证，这样其实就和命令行git的配置使用差不多了。<s>这样的话真的感觉sourcetree有个GUI用</s></p>
+<p>其次是如果有人有整洁强迫症，可以考虑在推送时推送到一个单独的分支上，而不是推送到副本分支上，譬如你可以单独新建一个patch-xxx这样的分支等等，具体请谷歌。反正合并的时候自己知道用哪个分支合并就可以了，命名规范主要是记录起来好看一点。</p>
+<h4 id="我想反悔推送-push-怎么办">我想反悔推送(push)怎么办</h4>
+<p>假如你推送了一个错误的东西上去，再纠正还得再推一个，感觉没必要的时候，可以使用这个方法。</p>
+<p>在sourcetree里，点击你要重置回去的那一次提交，右键-重置当前分支到此次提交-软合并(保留所有本地改动)，确定你做的修改没问题后，再正常地在本地提交一次，提交完了之后，确定本地仓库没问题的时候，右上角点击命令行模式，打开git bash，输入以下指令即可。参考<a href="https://blog.csdn.net/ligang2585116/article/details/71094887" target="_blank" rel="noopener">git撤销&amp;回滚操作 - 李刚的学习专栏 - CSDN博客</a>。</p>
+<p>注意尽量只在自己的仓库上进行强制推送，强制推送过于暴力，可能会造成一些不可挽回的后果。</p>
+<pre class="line-numbers language-language-bash"><code class="language-language-bash">git push -f
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>返回<a href="#签名验证">签名验证</a></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://binglinggroup.github.io/archives/github pull request流程演示.html">https://binglinggroup.github.io/archives/github pull request流程演示.html</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+                
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #d33682;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://binglinggroup.github.io/archives/github pull request流程演示.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://binglinggroup.github.io/archives/github pull request流程演示.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/archives/在windows版的sourcetree上设置gpg签名.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/archives/冰灵win批处理.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/custom/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/custom/avatar.png" alt="冰灵's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        冰灵
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: binglingfansub@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">二月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/关于/">关于<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动画杂谈/">动画杂谈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/工具/">工具<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏/">游戏<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/演示/">演示<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/科普/">科普<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/资源/">资源<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/转载/">转载<span class="sidebar_archives-count">28</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="回溯">
+                
+                    <i class="material-icons sidebar-material-icons">restore</i>
+                
+                回溯
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">50</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/BingLingGroup" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;冰灵的博客 | BingLing's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        </body>
+    
+</html>

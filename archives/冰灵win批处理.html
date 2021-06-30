@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://https-binglinggroup-github-io.disqus.com">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            冰灵win批处理(190209) | 
+        
+        冰灵的博客 | BingLing&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/custom/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="冰灵制作组的日志集散地">
+    <meta name="keywords" content=",冰灵制作组,windows,批处理,batch,批量重命名,批量压缩,7z">
+    <meta name="theme-color" content="#268bd2">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?AOttsn/BTbWJsOuxkt9DPA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #cb4b16;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #268bd2 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #268bd2 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #268bd2 !important;
+  }
+
+  .toTop {
+    background: #d33682 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #d33682;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #d33682;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #d33682;
+  }
+
+  .post-toc a:hover {
+    color: #cb4b16;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #FDF6E3;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://binglinggroup.github.io/archives/冰灵win批处理.html">
+    <meta name="msapplication-navbutton-color" content="#268bd2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="冰灵的博客 | BingLing&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/custom/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://binglinggroup.github.io/archives/冰灵win批处理.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="冰灵win批处理(190209) | 冰灵的博客 | BingLing&#39;s Blog">
+    <meta property="og:image" content="/img/custom/favicon.png">
+    <meta property="og:description" content="冰灵制作组的日志集散地">
+    <meta property="og:article:tag" content="冰灵制作组"> <meta property="og:article:tag" content="windows"> <meta property="og:article:tag" content="批处理"> <meta property="og:article:tag" content="batch"> <meta property="og:article:tag" content="批量重命名"> <meta property="og:article:tag" content="批量压缩"> <meta property="og:article:tag" content="7z"> 
+
+    
+        <meta property="article:published_time" content="Sat Jan 05 2019 18:00:00 GMT+0000">
+        <meta property="article:modified_time" content="Mon Jul 08 2019 08:19:52 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://binglinggroup.github.io/archives/冰灵win批处理.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://binglinggroup.github.io/archives/冰灵win批处理.html",
+    "headline": "冰灵win批处理(190209)",
+    "datePublished": "Sat Jan 05 2019 18:00:00 GMT+0000",
+    "dateModified": "Mon Jul 08 2019 08:19:52 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "冰灵",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/custom/avatar.png"
+        },
+        "description": "Return to the past now!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "冰灵的博客 | BingLing&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/custom/favicon.png"
+        }
+    },
+    "keywords": ",冰灵制作组,windows,批处理,batch,批量重命名,批量压缩,7z",
+    "description": "冰灵制作组的日志集散地",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+                    
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#批量重命名批处理-rename-files-from-txt"><span class="post-toc-number">2.</span> <span class="post-toc-text">批量重命名批处理(rename_files_from_txt)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#为什么要写这样一个批处理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">为什么要写这样一个批处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#功能"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">功能</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#批量压缩批处理-7z-batch和run-7z-batch"><span class="post-toc-number">3.</span> <span class="post-toc-text">批量压缩批处理(7z_batch和run_7z_batch)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#python环境批处理"><span class="post-toc-number">4.</span> <span class="post-toc-text">python环境批处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他批处理"><span class="post-toc-number">5.</span> <span class="post-toc-text">其他批处理</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/%E5%86%B0%E7%81%B5win%E6%89%B9%E5%A4%84%E7%90%86/[Crappy%201080P]%20Code%20Lyoko%20S4E80_001148.878.png)">
+    
+            <p class="article-headline-p">
+                冰灵win批处理(190209)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/custom/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>冰灵</strong>
+        <span>1月 05, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3klEQVR42u3ay24bMRAEQP3/TztXA3ZW3cMVLJG1p8DZB4sGPJhpPr6OvB7Y2NjY2NjY2NjYb8l+xNf3+3++4ZfPXL4h+crsDT/vx8bGxj6B/eRP/yX7f/dcLzTZoHajnzyFjY2NfQA7KVqzItduR/7+otBiY2NjY5dP5e1KUiaxsbGxsV9RwPJGJXl2tinY2NjY2LMBzcr4qR1CtW/GxsbGPpM9C3r/9t9/lm9jY2Njvxn7rmv9gE5+/3CF2NjY2JuykwM0RZEIlthGC/nxnaXDl9jY2Njbse8aIeXx7awtKcJmbGxs7K3ZeUFaD1/bcVUBa4NebGxs7E3Z1y+dYfKfrMe9S6kINjY29geyZzFqux35eCgvovkGYWNjY5/AXmkV2o2YNRiz/8XGxsY+gZ2Esu0xmraZSb4++1VhY2Njn8ZeJ7V3Jk3OyugKGxsb+xx2O7JpwW200G56tInY2NjYm7KvS0XSKuQR7KzlyMdJTzYFGxsbe1P2ymGafDvawCBfW/IsNjY29t7s4rHy4OP6IcuVgRc2Njb2Oex8JHRXm9G2FrOwuc63sbGxsT+cnce0bcFLljsrV+04DBsbG/sE9iyIvd64lUVfF782nMDGxsY+k50s997BUNveFMd9sLGxsbdm5y9ty0/+lWTklDdLw3gAGxsb+2PZs5CgPcSTb99K/HBzPICNjY39gez2mOPKU+2oaGlzsbGxsbdmt4trA4aVpmJWxrCxsbHPZOdhbYKcBcCzI5hLBQwbGxv7w9kvKRXxdswO5SSjLmxsbOxz2I/4mpWTZEErEULRSmFjY2NvzU6K1kq5annFkcq8fcLGxsY+gL0yKkruzEdOs+KKjY2Njd0OevIi18bD+XGi24JebGxs7GPYM2QbOSRNUT1swsbGxj6AvfKx9if5waA23H3JLA0bGxv77dmz+Ha29LxczQKJooBhY2Njb8E+58LGxsbGxsbGxsZ+m+sfQYYBk1HJ98YAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/7z/">7z</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/batch/">batch</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/windows/">windows</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/冰灵制作组/">冰灵制作组</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/批处理/">批处理</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/批量压缩/">批量压缩</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/批量重命名/">批量重命名</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=冰灵win批处理(190209)&url=https://binglinggroup.github.io/archives/冰灵win批处理.html&pic=https://binglinggroup.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=冰灵win批处理(190209)&url=https://binglinggroup.github.io/archives/冰灵win批处理.html&via=冰灵" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://binglinggroup.github.io/archives/冰灵win批处理.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=冰灵的博客 | BingLing&#39;s Blog&title=冰灵win批处理(190209)&summary=冰灵制作组的日志集散地&pics=https://binglinggroup.github.io/img/favicon.png&url=https://binglinggroup.github.io/archives/冰灵win批处理.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://binglinggroup.github.io/archives/冰灵win批处理.html&text=冰灵win批处理(190209)" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+                
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p><a href="https://raw.githubusercontent.com/BingLingGroup/BingLingGroup.github.io/img/%E5%86%B0%E7%81%B5win%E6%89%B9%E5%A4%84%E7%90%86/%5BCrappy%201080P%5D%20Code%20Lyoko%20S4E80_001148.878.png" target="_blank" rel="noopener">题图来源(Code Lyoko E80的11分48秒位置)</a>将浏览器拉窄即可看到全图。<br>
+PC版网页左上角从上到下第二个图标是目录，请多用目录。<br>
+标题后面括号里的日期指的是最后更新日期，头像旁边的日期是最初发布日期。</p>
+</blockquote>
+<font size="4">目录</font>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E6%89%B9%E5%A4%84%E7%90%86-rename-files-from-txt">批量重命名批处理</a>
+<ul>
+<li>2.1 <a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E6%89%B9%E5%A4%84%E7%90%86">为什么要写这样一个批处理</a></li>
+<li>2.2 <a href="#%E5%8A%9F%E8%83%BD">功能</a></li>
+<li>2.3 <a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
+</ul>
+</li>
+<li><a href="#%E6%89%B9%E9%87%8F%E5%8E%8B%E7%BC%A9%E6%89%B9%E5%A4%84%E7%90%86-7z-batch%E5%92%8Crun-7z-batch">批量压缩批处理</a></li>
+<li><a href="#python%E7%8E%AF%E5%A2%83%E6%89%B9%E5%A4%84%E7%90%86">python环境批处理</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96%E6%89%B9%E5%A4%84%E7%90%86">其他批处理</a></li>
+</ol>
+<h3 id="简介">简介</h3>
+<p>这次来讲讲最近为了发布资源而写的几个windows batch批处理的使用指南。注意只能在windows上使用，<s>谁叫batch是windows专用的脚本语言，只能被windows命令行解释器执行，但是写起来一点也不省心啊</s>，以后大概会出同功能的python版，这样就可以跨平台运行了。</p>
+<p>冰灵批处理相关的<a href="https://github.com/BingLingGroup/bingling-batch" target="_blank" rel="noopener">github仓库</a>，可以通过下载<a href="https://github.com/BingLingGroup/bingling-batch/archive/dev.zip" target="_blank" rel="noopener">仓库压缩文档</a>获得可以直接在windows上运行的.bat文件。目前项目readme还在施工中，<s>因为我懒</s>。</p>
+<p>特别要注意的一点是，和其他命令行软件的输入一样，如果你的路径或者文件名里面有空格，那么请务必在外面加上引号。</p>
+<h3 id="批量重命名批处理-rename-files-from-txt">批量重命名批处理(rename_files_from_txt)</h3>
+<h4 id="为什么要写这样一个批处理">为什么要写这样一个批处理</h4>
+<p>其实很多软件都有批量重命名的功能，我平时用的<a href="http://www.xiles.net/" target="_blank" rel="noopener">nexus file</a>在这方面功能就极其强大，譬如可以控制插入字符的位置，查找替换等等，那我为什么还要写这样一个批处理呢？</p>
+<p>实际上，这些重命名软件，我现在还没看到哪个是支持全自定义列表重命名的，也就是，每一个文件名的内容都不一样，那有人问了，你既然每一个文件名内容都不一样，为什么不能一个个重命名非要写一个程序呢？其实这里是有一个相对合理的应用场景的。</p>
+<ol>
+<li>一个个重命名，就不说鼠标要一个个点浪费<s>微动</s>寿命了，F2键也会被摁坏，甚至不知道快捷键的人可能会摁坏第二个鼠标按键(冷笑话)。</li>
+<li>考虑一下是别人给你的文件名列表呢？那你可能还要多坏另外三个键盘的按键是Ctrl，C和V了(滑稽)</li>
+</ol>
+<p>我就说说冰灵的应用场景。</p>
+<ol>
+<li>字幕组组长给你拟定了一个分集标题，每集标题都不一样。</li>
+<li>你是负责把视频上传到b站的，b站的分P名和很多网站处理上传文件的逻辑是一样的，默认值是上传前的文件名。(a站就不是 <s>所以a站就不填分P名了</s>)</li>
+<li>b站的分P名编辑起来比较鬼畜，好像是不能用鼠标点光标位置，修改起来困难。</li>
+<li>你会很自然想到先在本地就把文件名重命名好然后再上传。</li>
+</ol>
+<p>譬如这样一个列表，一行一个名称</p>
+<blockquote>
+<p>S4E66_William Returns_William回归<br>
+S4E67_Double Take_替身袭击<br>
+S4E68_Opening Act_开幕演出<br>
+S4E69_Wreck Room_毁坏房间<br>
+…</p>
+</blockquote>
+<p>那也就会很自然地想到写一个程序一行行读进来然后拿去重命名。</p>
+<p>至于为什么用的批处理，<s>主要是看到一个<a href="https://space.bilibili.com/3512816" target="_blank" rel="noopener">b站压制大佬</a>写的用来转换帧率的批处理不够懒人化而感到不满于是开始入坑</s>，一开始是想着写着简单，后来发现越简单的东西越难写，特别是batch的中文文档不是很多<s>很难抄代码</s>的情况下，还好后来多看<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" target="_blank" rel="noopener">官方文档</a>和stackoverflow解决了一部分问题。</p>
+<h4 id="功能">功能</h4>
+<p>目前能做到的功能就是从一个源文件名txt和一个目的文件名txt中读取文件名，然后改名。其中源文件名txt支持自动生成，但是因为batch默认的文件名排序比较迷，和资源管理器中的文件名顺序并不一致。</p>
+<p>最明显的一点是，按文件名顺序排序后，资源管理器里面1后面的2到9的数字会在10之前，而batch的文件名顺序是，2到9的数字会在10之后，只有你命名成等宽的数字编码，譬如最大不超过999则是001或者最大不超过99则是01这种，才会得到正确的排序。</p>
+<p>所以本批处理会强制停下让你重新检查源文件名列表和目的文件名列表的一一对应关系，如果有问题建议复制到<a href="https://www.libreoffice.org/" target="_blank" rel="noopener">excel</a>中进行编辑，只要在这个步骤时，确认每一行对应关系没问题，那么最后重命名的结果就是正确的，毕竟程序核心只是遍历每一行txt，然后调用系统自带的重命名命令ren进行重命名而已。<s>毕竟batch太过简略，拿来写排序算法也实在太难受所以后续估计不会在这方面进行改进了</s>。</p>
+<blockquote>
+<p>什么？你电脑上还没有装excel？<a href="https://www.libreoffice.org/" target="_blank" rel="noopener">libre office</a>了解一下，如果不是给老师写报告，只是搞搞重命名应该够用了，还没有WPS的弹窗😨</p>
+</blockquote>
+<p>以及，因为<a href="https://www.libreoffice.org/" target="_blank" rel="noopener">excel</a>或者<a href="http://www.xiles.net/" target="_blank" rel="noopener">nexus file</a>这类软件对于编号式重命名方面的功能非常强大，本批处理以后也不会在这方面增加功能。</p>
+<h4 id="使用">使用</h4>
+<p>直接打开后会弹出全提示模式，使用方法详见提示信息：</p>
+<pre class="line-numbers language-language-batch"><code class="language-language-batch">echo ^[警告^]这里若不退出，下一步将进行重命名
+echo 请确认已做好文件备份，以防止意外情况发生
+echo.
+echo ^[警告^]请确保不要使用任何windows
+echo 文件系统禁止使用的符号进行重命名
+echo.
+echo 全提示模式：
+echo.
+echo 1.待改名文件在当前路径下的work文件夹内
+echo.
+echo 2.work文件夹内所有文件都会被重命名
+echo.
+echo 3.改名后文件名列表dst_list.txt处在当前路径下，
+echo   请使用GB2312编码txt，否则会有乱码
+echo   (我大窗国自有窗国情在此)
+echo.
+echo 4.dst_list.txt的文件名列表格式为：
+echo   1)一行一个文件名
+echo   2)顺序不影响重命名
+echo   3)文件名中可以包含空格
+echo.
+echo 5.输出这段提示信息前，
+echo   如果你的work文件夹已存在，
+echo   批处理已将其中的文件名输出成列表
+echo   到当前路径下的src_list.txt中
+echo.
+echo 6.请根据自己喜好创建dst_list.txt，
+echo   因为下一步程序
+echo   1) 不会再改变dst_list.txt
+echo   2) 根据src_list.txt和dst_list.txt进行重命名
+echo      如果你有特殊需要，可以对src_list.txt中的文件名
+echo      进行编辑操作
+echo.
+echo 7.不会提示给予再次确认改名前后名称对应关系，
+echo   改名前请做好文件备份，以免出现意外情况
+echo.
+echo 8.建议使用excel提前编辑好改名后文件名
+echo   并拷贝到dst_list.txt中
+echo   注意使用Ctrl-H搜索替换掉excel特有大空格
+echo.
+echo 9.不会更改扩展名
+echo.
+echo 10.如果你做好了1-4的准备，再重新运行本批处理
+echo    将会进入到另一个重命名模式
+echo.
+echo 11.重命名之后
+echo    src_list.txt和dst_list.txt不会自动删除
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>另一种模式其实跟这个差不多，但是会“自动”帮你把dst_list.txt进行排序，未必是好事，后续会改进这个逻辑。提示信息如下：</p>
+<pre class="line-numbers language-language-batch"><code class="language-language-batch">echo ^[警告^]这里若不退出，下一步将进行重命名
+echo 请确认已做好文件备份，以防止意外情况发生
+echo.
+echo ^[警告^]请确保不要使用任何windows
+echo 文件系统禁止使用的符号进行重命名
+echo.
+echo 核对模式：
+echo.
+echo 1.为了防止你的排序方法
+echo   和batch文件名顺序有不一致情况，
+echo   已对新文件名列表
+echo   按照文件名的顺序重新进行排序，
+echo   但是这不代表两种文件顺序
+echo   就一定一一对应
+echo.
+echo 2.^[警告^]如果新旧文件名差异较大，
+echo   建议逐行核对
+echo.
+echo 3.下一步程序
+echo   1) 不会再改变dst_list.txt
+echo   2) 根据src_list.txt和dst_list.txt进行重命名
+echo      如果你有特殊需要，可以对src_list.txt中的文件名
+echo      进行编辑操作
+echo.
+echo 4.重命名之后
+echo    src_list.txt和dst_list.txt不会自动删除
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="批量压缩批处理-7z-batch和run-7z-batch">批量压缩批处理(7z_batch和run_7z_batch)</h3>
+<p>这个批处理其实意义不大，正常的用途中绝不会有人想到要让每个文件都只打包成一个文件，多数情况下大家都是为了避免小文件传输影响速度或者便捷性才会使用压缩把多个文件打包成一个大压缩包，而且对于有损视频格式而言，使用压缩算法可以再压缩出的空间微乎其微，打成一个大的压缩包会因为体积太大，而不利于大家下载，完全就是做重复计算浪费性能和电费。</p>
+<p>做这样的批处理完全是迫于百度云对特定文件格式的检测，规避百度云的所谓检测删封的同时方便大家索取单个视频文件而已。</p>
+<p>这个程序其实本来可以写的挺简单的，主要是考虑到要设置一些需要忽略的情况，譬如如果用户非要在待压缩文件所在文件夹里面启动批处理进行压缩，但又不想进行多余的操作，把批处理自身也压缩，产生不必要的文件，那么就需要设置忽略的脚本名称。</p>
+<p>其实这个批处理的提示信息也写得挺详细的了，看提示信息基本就会用了。</p>
+<pre class="line-numbers language-language-batch"><code class="language-language-batch">echo 本批处理可以将某一文件夹内的文件逐个压缩
+echo.
+echo 首先确认命令行7z，也就是7z.exe是否添加到环境变量-系统变量
+echo 或者确认7z.exe在待压缩文件所在文件夹
+echo.
+echo 输入待压缩的文件所在文件夹
+set /p work_dir=(默认为当前文件夹，回车为默认):
+echo.
+if not defined work_dir set work_dir=%~dp0
+
+echo 输入压缩后的压缩格式后缀(包括点)
+set /p dst_exte=(默认为.7z，请输入7z支持的压缩格式，回车为默认):
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>还有一个run_7z_batch，是我考虑到这个程序一定要有自定义输入，但是如果由程序提问等待用户输入这样太麻烦了，等于是我每次都要重新输入参数，run_7z_batch就是在命令行界面下调用7z_batch，将参数直接传递给7z_batch，这样7z_batch就不提问了，直接运行更加省事。</p>
+<p>因为run_7z_batch是使用call命令调用7z_batch运行，我没查到批处理能获得到call它的批处理或者程序的名称的功能，所以这多设置了一个参数，传递给7z_batch，告诉它run_7z_batch的名字是什么，这样来忽略额外的文件名。还有就是，我在7z_batch里面也把对自身文件名的获取设置成从命令行参数中得到，这样的话就对用户更改了批处理文件名的情况做出了处理。换句话说，你在使用这两个批处理的时候，可以把它们的名字命名成任意你喜欢的名字，也不会影响程序对文件的正常压缩过程，虽然我觉得很没有必要就是了。</p>
+<pre class="line-numbers language-language-batch"><code class="language-language-batch">set z7_bat_name="7z_batch.bat"
+rem 7z_batch文件名
+set work_path="C:\userfile\Desktop\压制\batch脚本\test\work"
+rem 待压缩文件所在文件夹，即工作文件夹
+set run_bat_name="run_7z_batch.bat"
+rem 需要额外忽略的一个文件名，若此脚本在工作文件夹内，则需要忽略
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="python环境批处理">python环境批处理</h3>
+<p>github链接：<a href="https://github.com/BingLingGroup/bingling-batch/tree/dev/python_syspath_batch" target="_blank" rel="noopener">bingling batch python syspath</a></p>
+<p>其中win_py_syspath_sw_create.bat为python环境切换创建批处理，win_py_syspath_sw.bat为python环境切换批处理，win_py_syspath_query.bat为系统环境变量查询批处理。</p>
+<p>该批处理编写时用到的参考资料：</p>
+<p><a href="https://blog.csdn.net/haibo19981/article/details/52251945" target="_blank" rel="noopener">bat知识点3_for循环_跳出嵌套 - haibo19981的专栏 - CSDN博客</a></p>
+<p><a href="https://www.jb51.net/article/17928.htm" target="_blank" rel="noopener">批处理 FOR参数/F之tokens详解_DOS/BAT_脚本之家</a></p>
+<p><a href="https://stackoverflow.com/questions/21606419/set-windows-environment-variables-with-a-batch-file" target="_blank" rel="noopener">Set windows environment variables with a batch file - Stack Overflow</a></p>
+<p><a href="https://blog.csdn.net/wzsbll/article/details/6690895" target="_blank" rel="noopener">如何在cmd命令行中查看、修改、删除与添加环境变量 - wzsbll的专栏 - CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/baiyibin0530/article/details/78841653" target="_blank" rel="noopener">SET和SETX命令的应用 - baiyibin0530的专栏 - CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/anhuidelinger/article/details/14044653" target="_blank" rel="noopener">通过注册表设置环境变量 - anhuidelinger的专栏 - CSDN博客</a></p>
+<p><a href="https://www.cnblogs.com/jinzhenshui/archive/2012/05/17/2506129.html" target="_blank" rel="noopener">bat、cmd 批处理中（或 DOS环境）的特殊字符 - jinzhenshui - 博客园</a></p>
+<p><a href="https://stackoverflow.com/questions/35477290/how-to-get-last-n-tokens-from-string-using-for-f-in-batch-file" target="_blank" rel="noopener">cmd - How to get last n tokens from string using “FOR /F” in batch file - Stack Overflow</a></p>
+<p><a href="https://blog.csdn.net/kukou/article/details/4895676" target="_blank" rel="noopener">批处理：FOR的参数/F之delims详解 - kukou的专栏 - CSDN博客</a></p>
+<p><a href="https://stackoverflow.com/questions/17327512/printing-all-tokens-after-2nd-token-in-a-batch-script" target="_blank" rel="noopener">regex - printing all tokens after 2nd token in a batch script - Stack Overflow</a></p>
+<p><a href="https://alizf.iteye.com/blog/616388" target="_blank" rel="noopener">在BAT文件中实现对空格分割的字符串的处理 - zhifeng - ITeye博客</a></p>
+<p><a href="https://blog.csdn.net/albertsh/article/details/79919465" target="_blank" rel="noopener">.bat批处理（六）：替换字符串中匹配的子串 - AlbertS Home of Technology - CSDN博客</a></p>
+<p><a href="https://stackoverflow.com/questions/2772456/string-replacement-in-batch-file/2772498" target="_blank" rel="noopener">command line - String replacement in batch file - Stack Overflow</a></p>
+<p><a href="https://stackoverflow.com/questions/41323488/batch-replacing-with-percent-symbol" target="_blank" rel="noopener">string - Batch - replacing with percent symbol - Stack Overflow</a></p>
+<h3 id="其他批处理">其他批处理</h3>
+<p>一个是getname_batch还有一个是test_rename_batch，前面的看到代码中的注释就知道是怎么用的了，后面这个是用来测试rename_batch的批量生成txt的批处理，没必要拿来用我就没加任何注释，但是稍微懂一点batch应该也可以看懂，这里就不再解释了。</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://binglinggroup.github.io/archives/冰灵win批处理.html">https://binglinggroup.github.io/archives/冰灵win批处理.html</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+                
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #d33682;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://binglinggroup.github.io/archives/冰灵win批处理.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://binglinggroup.github.io/archives/冰灵win批处理.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-binglinggroup-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/archives/github pull request流程演示.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/archives/Code Lyoko资源索引6.0.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/custom/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/custom/avatar.png" alt="冰灵's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        冰灵
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: binglingfansub@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">二月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/关于/">关于<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动画杂谈/">动画杂谈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/工具/">工具<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏/">游戏<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/演示/">演示<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/科普/">科普<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/资源/">资源<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/转载/">转载<span class="sidebar_archives-count">28</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="回溯">
+                
+                    <i class="material-icons sidebar-material-icons">restore</i>
+                
+                回溯
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">50</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/BingLingGroup" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;冰灵的博客 | BingLing's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        </body>
+    
+</html>
